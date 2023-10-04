@@ -1,0 +1,16 @@
+---
+version: '3.8'
+services:
+  mypostgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: vinod
+
+  myadminer:
+    image: adminer
+    ports:
+      - 8080:80
+    links:
+      - mypostgres:postgres
+
+...
