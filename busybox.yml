@@ -1,0 +1,15 @@
+---
+version: '3.8'
+services:
+  mybusybox:
+    image: busybox
+    container_name: c1
+
+  mybusybox1:
+    image: busybox
+    container_name: c2
+    links:
+      - mybusybox:busybox
+    
+
+...
